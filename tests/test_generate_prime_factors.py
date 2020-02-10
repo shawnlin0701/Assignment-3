@@ -8,7 +8,7 @@ from prime import generate_prime_factors
 
 def test_incorrect_dat_type():
     with pytest.raises(ValueError):
-        generate_prime_factors("str")
+        generate_prime_factors("string")
         generate_prime_factors(6.6)
 
 def test_1():
@@ -28,3 +28,6 @@ def test_6():
 
 def test_8():
     assert generate_prime_factors(8) == [2, 2, 2]
+
+def test_9():
+    assert generate_prime_factors(9) == [3, 3]

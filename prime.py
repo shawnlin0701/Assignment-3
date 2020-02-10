@@ -1,41 +1,32 @@
 """
 prime.py -- Write the application code here
 """
-def generate_prime_factors(Number):
+def generate_prime_factors(number):
     #setting the variables and list
-    count = 0
     prime_factors = []
-    dividend = int(Number)
+    dividend = int(number)
     #check for speacial cases
-    if Number == 1:
+    if number == 1:
         print(prime_factors)
         return prime_factors
 
-    if Number == 2:
-        prime_factors.append(Number)
+    if number == 2:
+        prime_factors.append(number)
         print(prime_factors)
         return prime_factors
 
-    if Number == 3:
-        prime_factors.append(Number)
+    if number == 3:
+        prime_factors.append(number)
         print(prime_factors)
         return prime_factors
+
     #for loop to check for prime factors and append them to a list
-    for i in range(2, (dividend//2+1)):
+    for i in range(2, number//2+1):
         while dividend % i == 0:
             prime_factors.append(i)
             dividend = dividend//i
-            count = count + 1
+        else:
             i = 2
-
-    # returning the result and the list of prime factors
-    """
-    if count == 0 and Number != 1:
-        print(" %d is a Prime Number" %int(Number))
-    else:
-        print(" %d is not a Prime Number" %int(Number))
-    """
+    # returning the list of prime factors
     print(prime_factors)
     return prime_factors
-
-generate_prime_factors(4)
