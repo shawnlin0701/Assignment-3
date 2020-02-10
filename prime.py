@@ -6,7 +6,9 @@ def generate_prime_factors(Number):
     count = 0
     prime_factors = []
     dividend = int(Number)
-
+    if Number == 1:
+        print(prime_factors)
+        return prime_factors
     #for loop to check for prime factors and append them to a list
     for i in range(2, (dividend//2+1)):
         while dividend % i == 0:
@@ -20,6 +22,6 @@ def generate_prime_factors(Number):
         print(" %d is a Prime Number" %int(Number))
     else:
         print(" %d is not a Prime Number" %int(Number))
-        print(prime_factors)
+        print(Number, "has prime factors of: ", prime_factors)
 
-generate_prime_factors('8')
+generate_prime_factors(1)
