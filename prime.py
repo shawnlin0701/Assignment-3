@@ -1,6 +1,3 @@
-"""
-prime.py -- Write the application code here
-"""
 def generate_prime_factors(number):
     #setting the variables and list
     prime_factors = []
