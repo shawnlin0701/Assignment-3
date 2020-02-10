@@ -13,3 +13,6 @@ def test_incorrect_dat_type():
 
 def test_1():
     assert generate_prime_factors(1) == []
+
+def test_2():
+    assert generate_prime_factors(2) == [2]

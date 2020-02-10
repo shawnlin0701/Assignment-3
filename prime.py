@@ -6,9 +6,16 @@ def generate_prime_factors(Number):
     count = 0
     prime_factors = []
     dividend = int(Number)
+    #check for speacial case
     if Number == 1:
         print(prime_factors)
         return prime_factors
+
+    if Number == 2:
+        prime_factors.append(Number)
+        print(prime_factors)
+        return prime_factors
+        
     #for loop to check for prime factors and append them to a list
     for i in range(2, (dividend//2+1)):
         while dividend % i == 0:
