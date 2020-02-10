@@ -29,10 +29,13 @@ def generate_prime_factors(Number):
             i = 2
 
     # returning the result and the list of prime factors
+    """
     if count == 0 and Number != 1:
         print(" %d is a Prime Number" %int(Number))
     else:
         print(" %d is not a Prime Number" %int(Number))
-        print(Number, "has prime factors of: ", prime_factors)
+    """
+    print(prime_factors)
+    return prime_factors
 
-generate_prime_factors(1)
+generate_prime_factors(4)
